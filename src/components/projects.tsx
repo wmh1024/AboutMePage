@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import { cn } from "@/lib/utils";
-import { Star } from "lucide-react";
+import {cn} from "@/lib/utils";
+import {Code, Star} from "lucide-react";
 
 type ProjectType = {
   title: string;
@@ -10,6 +10,7 @@ type ProjectType = {
   link: string;
   avatar: string;
   stars?: string;
+  code?: string;
 };
 
 type ProjectsProps = {
@@ -27,7 +28,7 @@ const lineGradients = [
   "from-blue-500 to-indigo-500",
 ];
 
-function Projects({ data }: ProjectsProps) {
+function Projects({data}: ProjectsProps) {
   return (
     <div
       className={`grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 max-w-[min(80vw,860px)] mx-auto lg:px-4`}
@@ -40,14 +41,15 @@ function Projects({ data }: ProjectsProps) {
 }
 
 function Project({
-  idx,
-  title,
-  description,
-  tags,
-  link,
-  avatar,
-  stars,
-}: ProjectType & {
+                   idx,
+                   title,
+                   description,
+                   tags,
+                   link,
+                   avatar,
+                   stars,
+                   code,
+                 }: ProjectType & {
   idx: number;
 }) {
   const gradient = lineGradients[idx % lineGradients.length];
@@ -61,8 +63,9 @@ function Project({
           "rounded-lg shadow-md border cursor-pointer overflow-hidden",
         )}
       >
-        <div className={cn("h-8 w-full bg-gradient-to-r blur-1", gradient)} />
-        <div className="bg-background-hover shadow transition-all select-none rounded-full p-1.5 absolute top-4 right-4">
+        <div className={cn("h-8 w-full bg-gradient-to-r blur-1", gradient)}/>
+        <div
+          className="bg-background-hover shadow transition-all select-none rounded-full p-1.5 absolute top-4 right-4">
           <img
             loading={"lazy"}
             src={`/project/${avatar}`}
@@ -74,9 +77,17 @@ function Project({
           <h3 className="flex flex-row items-center text-lg font-bold">
             {title}
             {stars && (
-              <span className="w-fit flex flex-row items-center border text-xs text-secondary ml-1.5 rounded-md px-1.5 py-0.5 whitespace-nowrap">
-                <Star className="w-3 h-3 mr-1.5" />
+              <span
+                className="w-fit flex flex-row items-center border text-xs text-secondary ml-1.5 rounded-md px-1.5 py-0.5 whitespace-nowrap">
+                <Star className="w-3 h-3 mr-1.5"/>
                 {stars}
+              </span>
+            )}
+            {code && (
+              <span
+                className="w-fit flex flex-row items-center border text-xs text-secondary ml-1.5 rounded-md px-1.5 py-0.5 whitespace-nowrap">
+                <Code className="w-3 h-3 mr-1.5"/>
+                {code}
               </span>
             )}
           </h3>

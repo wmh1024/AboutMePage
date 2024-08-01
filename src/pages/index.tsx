@@ -1,12 +1,11 @@
 import {Inter} from "next/font/google";
 import Image from "next/image";
 import {Button} from "@/components/ui/button";
-import {ChevronDown, HandHeart, Mail} from "lucide-react";
+import {ChevronDown} from "lucide-react";
 import {Typing} from "@/components/typing";
 import Title from "@/components/title";
 import Name from "@/components/name";
 import Projects from "@/components/projects";
-import Link from "next/link";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -81,7 +80,7 @@ function ProductSection() {
       <Title
         title={"About"}
         subtitle={"关于"}
-        tags={["INFJ", "Java", "Spring Boot", "Vue", "运维"]}
+        tags={["INFJ", "Java", "Vue", "Python", "运维"]}
       />
       <div className={`text-md mt-2 text-center max-w-[60vw] leading-8`}>
         我是{" "}
@@ -103,7 +102,7 @@ function ProductSection() {
         />
         {/*<img*/}
         {/*  className={`mt-2`}*/}
-        {/*  src="https://stats.deeptrain.net/user/Deeptrain-Community"*/}
+        {/*  src="https://github-readme-stats.vercel.app/api?username=wmh1024&show_icons=true&icon_color=CE1D2D&text_color=718096&bg_color=ffffff&locale=cn&hide=contribs"*/}
         {/*  alt="Deeptrain's Github Stats"*/}
         {/*/>*/}
       </div>
@@ -120,11 +119,11 @@ function ProjectSection() {
       <Projects
         data={[
           {
-            title: "Wang-OJ",
-            avatar: "wangoj.png",
-            description: "使用 SpringBoot 和 Vue 构建的在线代码判题平台，结合 Docker 作为代码沙箱，实现安全高效的判题服务。",
-            tags: ["SpringBoot", "Vue", "Docker"],
-            link: "https://wangoj.wmhwiki.cn",
+            title: "舞小奈",
+            avatar: "dcnana.png",
+            description: "基于 Vue3 和 Vant4 的舞立方助手应用，纯前端实现，力求保证数据和信息安全。",
+            tags: ["Vue3", "Vant4"],
+            link: "https://github.com/wmh1024/DcNana",
           },
           {
             title: "运维文档",
@@ -133,6 +132,14 @@ function ProjectSection() {
             tags: ["运维", "VitePress"],
             link: "https://ywdoc.cn",
           },
+          {
+            title: "WangOJ",
+            avatar: "wangoj.png",
+            description: "使用 SpringBoot 和 Vue 构建的在线代码判题平台，结合 Docker 作为代码沙箱，实现安全高效的判题服务。",
+            tags: ["SpringBoot", "Vue3", "Docker"],
+            link: "https://github.com/wmh1024/WangOJ",
+            code: "暂未开源",
+          }
         ]}
       />
     </div>
@@ -148,13 +155,6 @@ function WebsiteSection() {
       <Projects
         data={[
           {
-            title: "WangAI",
-            avatar: "wangai.png",
-            description: "大模型聚合平台，集成 ChatGPT、Dall-e、Gemini、讯飞星火等多个大模型，提供对话服务。",
-            tags: ["AIGC"],
-            link: "https://ai.wmhwiki.cn",
-          },
-          {
             title: "wmh's wiki",
             avatar: "wmhwiki.ico",
             description: "wmh 的生活向博客。记录日常学习生活，分享心得。",
@@ -162,6 +162,12 @@ function WebsiteSection() {
             link: "https://wmhwiki.cn",
           },
           {
+            title: "面试喵",
+            avatar: "mianshimiao.svg",
+            description: "记录 Java 八股面经，在面试中轻松拿捏！",
+            tags: ["VitePress"],
+            link: "https://mianshimiao.wmhwiki.cn",
+          }, {
             title: "wmh's Note",
             avatar: "wmhNote.png",
             description: "wmh 学习笔记站。记录编程学习心得，积累知识经验。",
@@ -181,6 +187,13 @@ function WebsiteSection() {
             description: "wmh 和 yx 的恋爱小窝。我们应该从喜欢里得到力量，而不是花光所有力量去喜欢。",
             tags: ["Typecho", "Brave"],
             link: "https://love.wmhwiki.cn",
+          },
+          {
+            title: "WangAI",
+            avatar: "wangai.png",
+            description: "大模型聚合平台，集成 ChatGPT、Dall-e、Gemini、讯飞星火等多个大模型，提供对话服务。",
+            tags: ["ChatNio"],
+            link: "https://gpt.wmhwiki.cn",
           },
         ]}
       />
