@@ -6,6 +6,7 @@ import {Typing} from "@/components/typing";
 import Title from "@/components/title";
 import Name from "@/components/name";
 import Projects from "@/components/projects";
+import Supporter from "@/components/supporter";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -65,6 +66,7 @@ export default function Home() {
         <ProductSection/>
         <ProjectSection/>
         <WebsiteSection/>
+        <SupporterSection/>
         <TechStackSection/>
         <Footer/>
       </div>
@@ -162,12 +164,6 @@ function WebsiteSection() {
             link: "https://wmhwiki.cn",
           },
           {
-            title: "面试喵",
-            avatar: "mianshimiao.svg",
-            description: "记录 Java 八股面经，在面试中轻松拿捏！",
-            tags: ["VitePress"],
-            link: "https://mianshimiao.wmhwiki.cn",
-          }, {
             title: "wmh's Note",
             avatar: "wmhNote.png",
             description: "wmh 学习笔记站。记录编程学习心得，积累知识经验。",
@@ -175,11 +171,11 @@ function WebsiteSection() {
             link: "https://note.wmhwiki.cn",
           },
           {
-            title: "WangDH",
-            avatar: "wangdh.png",
-            description: "wmh 自用导航站。记录常用网站链接，提高效率。",
-            tags: ["van-nav"],
-            link: "https://dh.wmhwiki.cn",
+            title: "面试喵",
+            avatar: "mianshimiao.svg",
+            description: "记录 Java 八股面经，在面试中轻松拿捏！",
+            tags: ["VitePress"],
+            link: "https://mianshimiao.wmhwiki.cn",
           },
           {
             title: "恋爱小窝",
@@ -187,6 +183,13 @@ function WebsiteSection() {
             description: "wmh 和 yx 的恋爱小窝。我们应该从喜欢里得到力量，而不是花光所有力量去喜欢。",
             tags: ["Typecho", "Brave"],
             link: "https://love.wmhwiki.cn",
+          },
+          {
+            title: "WangDH",
+            avatar: "wangdh.png",
+            description: "wmh 自用导航站。记录常用网站链接，提高效率。",
+            tags: ["van-nav"],
+            link: "https://dh.wmhwiki.cn",
           },
           {
             title: "WangAI",
@@ -201,10 +204,102 @@ function WebsiteSection() {
   );
 }
 
+function SupporterSection() {
+  return (
+    <div
+      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20 bg-[#ffffff07]`}
+    >
+      <Title title={"Supporter"} subtitle={"赞助者"}/>
+      <Supporter
+        supporters={
+          [
+            {
+              "name": "庆曦",
+              "avatar": "qingxi.jpg",
+              "message": "￥ 21.00"
+            },
+            {
+              "name": "小杰",
+              "avatar": "xiaojie.jpg",
+              "message": "￥ 18.00"
+            },
+            {
+              "name": "伊伊得一",
+              "avatar": "yiyideyi.jpg",
+              "message": "￥ 15.54"
+            },
+            {
+              "name": "lihuibear",
+              "avatar": "lihuibear.png",
+              "message": "￥ 9.00"
+            },
+            {
+              "name": "匿名",
+              "avatar": "noname.png",
+              "message": "￥ 9.99"
+            },
+            {
+              "name": "sgx",
+              "avatar": "sgx.jpg",
+              "message": "￥ 6.66"
+            },
+            {
+              "name": "看风",
+              "avatar": "noname.png",
+              "message": "￥ 5.20"
+            },
+            {
+              "name": "自然醒的日常",
+              "avatar": "ziranxing.jpg",
+              "message": "￥ 5.20"
+            },
+            {
+              "name": "北笙",
+              "avatar": "sheng.jpg",
+              "message": "￥ 5.00"
+            },
+            {
+              "name": "小包子",
+              "avatar": "xiaobaozi.jpg",
+              "message": "￥ 2.09"
+            },
+            {
+              "name": "菠萝小蛋挞🍍",
+              "avatar": "blxdt.jpg",
+              "message": "￥ 2.00"
+            },
+            {
+              "name": "#是笑笑呀",
+              "avatar": "xiaoxiao.jpg",
+              "message": "￥ 1.23"
+            },
+            {
+              "name": "灭迹曼",
+              "avatar": "miejiman.jpg",
+              "message": "￥ 0.99"
+            },
+            {
+              "name": "刘某",
+              "avatar": "liumou.jpg",
+              "message": "￥ 0.88"
+            },
+            {
+              "name": "女版郭富晨",
+              "avatar": "nbgfc.jpg",
+              "message": "￥ 0.10"
+            }
+          ]
+
+        }
+      />
+    </div>
+  );
+}
+
 function TechStackSection() {
   return (
     <div
-      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20  bg-[#ffffff07]`}
+      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20`}
     >
       <Title title={"Tech Stack"} subtitle={"技术栈"} tags={[
         "前端", "后端", "运维"
@@ -220,7 +315,7 @@ function TechStackSection() {
 
 function Footer() {
   return (
-    <div className={`footer pt-6 text-center text-sm `}>
+    <div className={`footer pt-6 text-center text-sm`}>
       {/*      <div className={`flex flex-row items-center justify-center mb-2 text-secondary`}>
         <Link href={"/donate"}>
           <HandHeart className={`w-4 h-4 inline-block mr-1`}/>
