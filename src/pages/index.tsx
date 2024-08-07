@@ -15,7 +15,7 @@ export default function Home() {
     <main className={inter.className}>
       <div className={`relative w-full h-full select-none`}>
         <Image
-          src="/background.webp"
+          src="/background.jpg"
           alt="background"
           layout={"fill"}
           className={
@@ -64,10 +64,10 @@ export default function Home() {
       </div>
       <div id={`section`} className={`w-full h-fit bg-background pt-4 pb-6`}>
         <ProductSection/>
+        <TechStackSection/>
         <ProjectSection/>
         <WebsiteSection/>
         <SupporterSection/>
-        <TechStackSection/>
         <Footer/>
       </div>
     </main>
@@ -115,7 +115,7 @@ function ProductSection() {
 function ProjectSection() {
   return (
     <div
-      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20 bg-[#ffffff07]`}
+      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20`}
     >
       <Title title={"Projects"} subtitle={"我的项目"}/>
       <Projects
@@ -151,7 +151,7 @@ function ProjectSection() {
 function WebsiteSection() {
   return (
     <div
-      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20`}
+      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20  bg-[#ffffff07]`}
     >
       <Title title={"Websites"} subtitle={"我的网站"}/>
       <Projects
@@ -207,7 +207,7 @@ function WebsiteSection() {
 function SupporterSection() {
   return (
     <div
-      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20 bg-[#ffffff07]`}
+      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20`}
     >
       <Title title={"Supporter"} subtitle={"赞助者"}/>
       <Supporter
@@ -299,15 +299,15 @@ function SupporterSection() {
 function TechStackSection() {
   return (
     <div
-      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20`}
+      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20  bg-[#ffffff07]`}
     >
       <Title title={"Tech Stack"} subtitle={"技术栈"} tags={[
         "前端", "后端", "运维"
       ]}/>
 
       <img
-        src="https://skillicons.dev/icons?i=java,python,c,nodejs,vue,linux,mysql,redis,git,github,bootstrap,nginx,js,ts,html,css&perline=12"
-        alt="Tech Stack" className={`max-w-[80vw] mt-4`}/>
+        src="https://skillicons.dev/icons?i=java,spring,python,c,cpp,nodejs,vue,go,lua,flask,pytorch,pinia,linux,mysql,redis,rabbitmq,git,github,anaconda,bootstrap,nginx,js,ts,html,css,docker,bash,md,maven,webpack,vite,npm,yarn,vim,sublime,vscode,idea,webstorm,pycharm&perline=12"
+        alt="Tech Stack" className={`max-w-[80vw] mt-6`}/>
       {/*<img src="https://skillicons.dev/icons?i=mysql,sqlite,redis,postgresql,rabbitmq,docker,kubernetes,nginx,git,npm,pnpm,yarn,vite,vitest,webpack,babel,cmake,anaconda,github,grafana,githubactions,jenkins,figma,aws,azure,gcp,cloudflare,vercel,netlify,heroku&perline=12" alt="Tools I Use" className={`max-w-[80vw] mt-6`} />*/}
     </div>
   );
