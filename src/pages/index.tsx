@@ -175,7 +175,7 @@ function WebsiteSection() {
             avatar: "mianshimiao.svg",
             description: "记录 Java 八股面经，在面试中轻松拿捏！",
             tags: ["VitePress"],
-            link: "https://mianshimiao.wmhwiki.cn",
+            link: "https://mianshi.wmhwiki.cn",
           },
           {
             title: "恋爱小窝",
