@@ -7,6 +7,7 @@ import Title from "@/components/title";
 import Name from "@/components/name";
 import Projects from "@/components/projects";
 import Supporter from "@/components/supporter";
+import AwardList from "@/components/awardlist";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -65,6 +66,7 @@ export default function Home() {
       <div id={`section`} className={`w-full h-fit bg-background pt-4 pb-6`}>
         <ProductSection/>
         <TechStackSection/>
+        <AwardListSection/>
         <ProjectSection/>
         <WebsiteSection/>
         <SupporterSection/>
@@ -112,12 +114,58 @@ function ProductSection() {
   );
 }
 
+function AwardListSection() {
+  return (
+    <div
+      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20 `}
+    >
+      <Title title={"Awards"} subtitle={"荣誉奖项"}/>
+      <div className="p-12">
+        <AwardList
+          awards={[
+            {
+              title: "CCPC 省赛 (河北) 铜奖",
+              date: "2024-05-25",
+              description: "2024年河北省大学生程序设计竞赛铜奖",
+              is_acm: true
+            },
+            {
+              title: "CCPC 省赛 (河北) 三等奖",
+              date: "2023-05-21",
+              description: "2023年河北省大学生程序设计竞赛三等奖",
+              is_acm: true
+            }, {
+              title: "CCPC 省赛 (河北) 三等奖",
+              date: "2022-10-22",
+              description: "2022年河北省大学生程序设计竞赛三等奖",
+              is_acm: true
+            }, {
+              title: "大学生智能汽车竞赛 (华北) 二等奖",
+              date: "2023-08-20",
+              description: "第十八届全国大学生智能汽车竞赛 (华北赛区) 二等奖",
+              is_car: true
+            }, {
+              title: "蓝桥杯 省赛 (河北) 一等奖",
+              date: "2024-04-13",
+              description: "第十五届蓝桥杯河北赛区C/C++程序设计大学B组一等奖"
+            }, {
+              title: "蓝桥杯 省赛 (河北) 一等奖",
+              date: "2023-04-08",
+              description: "第十四届蓝桥杯河北赛区C/C++程序设计大学B组一等奖"
+            }
+          ]}
+        />
+      </div>
+    </div>
+  );
+}
+
 function ProjectSection() {
   return (
     <div
-      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20`}
+      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20   bg-[#ffffff07]`}
     >
-      <Title title={"Projects"} subtitle={"我的项目"}/>
+      <Title title={"Projects"} subtitle={"开源项目"}/>
       <Projects
         data={[
           {
@@ -151,7 +199,7 @@ function ProjectSection() {
 function WebsiteSection() {
   return (
     <div
-      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20  bg-[#ffffff07]`}
+      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20`}
     >
       <Title title={"Websites"} subtitle={"我的网站"}/>
       <Projects
@@ -207,7 +255,7 @@ function WebsiteSection() {
 function SupporterSection() {
   return (
     <div
-      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20`}
+      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20   bg-[#ffffff07]`}
     >
       <Title title={"Supporter"} subtitle={"赞助者"}/>
       <Supporter
