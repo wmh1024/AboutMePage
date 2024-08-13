@@ -97,7 +97,7 @@ function ProductSection() {
         />
         ，全栈开发者。
         <br/>
-        鸟要高飞先振翅，人求上进先读书。
+        鸟欲高飞先振翅，人求上进先读书。
       </div>
       <div className={`stats mt-6 flex flex-col max-w-[80vw]`}>
         <img
@@ -128,30 +128,44 @@ function AwardListSection() {
               date: "2024-05-25",
               description: "2024年河北省大学生程序设计竞赛铜奖",
               is_acm: true
-            },
-            {
-              title: "CCPC 省赛 (河北) 三等奖",
-              date: "2023-05-21",
-              description: "2023年河北省大学生程序设计竞赛三等奖",
-              is_acm: true
             }, {
-              title: "CCPC 省赛 (河北) 三等奖",
-              date: "2022-10-22",
-              description: "2022年河北省大学生程序设计竞赛三等奖",
-              is_acm: true
+              title: "蓝桥杯 省赛 (河北) 一等奖",
+              date: "2024-04-13",
+              description: "第十五届蓝桥杯河北赛区C/C++程序设计大学B组一等奖"
+            }, {
+              title: "阿里云开发者社区 专家博主",
+              date: "2024-02-07",
+              description: "阿里云开发者社区乘风者计划专家博主",
+              is_ali: true
+            }, {
+              title: "抽取式文摘生成系统 软著",
+              date: "2023-09-01",
+              description: "基于 LDA 和 Transformer 的抽取式新闻文摘生成系统",
+              is_award1: true
             }, {
               title: "大学生智能汽车竞赛 (华北) 二等奖",
               date: "2023-08-20",
               description: "第十八届全国大学生智能汽车竞赛 (华北赛区) 二等奖",
               is_car: true
             }, {
-              title: "蓝桥杯 省赛 (河北) 一等奖",
-              date: "2024-04-13",
-              description: "第十五届蓝桥杯河北赛区C/C++程序设计大学B组一等奖"
+              title: "CCPC 省赛 (河北) 三等奖",
+              date: "2023-05-21",
+              description: "2023年河北省大学生程序设计竞赛三等奖",
+              is_acm: true
             }, {
               title: "蓝桥杯 省赛 (河北) 一等奖",
               date: "2023-04-08",
               description: "第十四届蓝桥杯河北赛区C/C++程序设计大学B组一等奖"
+            }, {
+              title: "CCPC 省赛 (河北) 三等奖",
+              date: "2022-10-22",
+              description: "2022年河北省大学生程序设计竞赛三等奖",
+              is_acm: true
+            }, {
+              title: "河北省青少年科技创新大赛 二等奖",
+              date: "2013-03-01",
+              description: "第二十八届河北省青少年科技创新大赛二等奖",
+              is_award2: true
             }
           ]}
         />

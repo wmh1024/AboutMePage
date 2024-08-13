@@ -1,7 +1,7 @@
-import {FaCarSide, FaTrophy} from 'react-icons/fa'; // 使用 react-icons 库中的奖杯图标
+import {FaAward, FaCarSide, FaTrophy} from 'react-icons/fa'; // 使用 react-icons 库中的奖杯图标
 import {cn} from "@/lib/utils";
 import React from "react";
-import {SiAcm} from "react-icons/si";
+import {SiAcm, SiAlibabacloud} from "react-icons/si";
 
 function AwardList({awards}: { awards: AwardType[] }) {
   return (
@@ -18,13 +18,22 @@ function AwardList({awards}: { awards: AwardType[] }) {
           <div className="flex flex-col p-6 pb-4 grow">
             <div className="flex items-center mb-4">
               {award.is_acm && (
-                <SiAcm className="text-yellow-400 w-8 h-8 mr-4"/>
+                <SiAcm className="text-orange-600 w-8 h-8 mr-4"/>
               )}
               {award.is_car && (
-                <FaCarSide className="text-yellow-400 w-8 h-8 mr-4"/>
+                <FaCarSide className="text-gray-300 w-8 h-8 mr-4"/>
+              )}
+              {award.is_ali && (
+                <SiAlibabacloud className="text-yellow-400 w-8 h-8 mr-4"/>
+              )}
+              {award.is_award1 && (
+                <FaAward className="text-yellow-400 w-8 h-8 mr-4"/>
+              )}
+              {award.is_award2 && (
+                <FaAward className="text-gray-300 w-8 h-8 mr-4"/>
               )}
 
-              {!award.is_acm && !award.is_car && (
+              {!award.is_acm && !award.is_car && !award.is_ali && !award.is_award1 && !award.is_award2 && (
                 <FaTrophy className="text-yellow-400 w-8 h-8 mr-4"/>
               )}
               <div>
@@ -50,6 +59,9 @@ type AwardType = {
   description: string;
   is_acm?: boolean;
   is_car?: boolean;
+  is_ali?: boolean;
+  is_award1?: boolean;
+  is_award2?: boolean;
 };
 
 
